@@ -48,6 +48,21 @@ struct CardView: View {
                 .clipShape(Circle())
                 .overlay(Circle().stroke(Color.gray, lineWidth: 2))
                 .shadow(color: .gray, radius: 1, x: 0, y: 0)
+            Text(input.title)
+                .foregroundStyle(.black)
+                .font(.title)
+                .fontWeight(.bold)
+            HStack {
+                Text(input.language ?? "")
+                    .font(.footnote)
+                    .foregroundStyle(.gray)
+                Spacer()
+                HStack(spacing: 4) {
+                    Image(systemName: "star")
+                        .renderingMode(.template)
+                        .foregroundStyle(.gray)
+                }
+            }
         }
     }
 }
